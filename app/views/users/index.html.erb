@@ -1,0 +1,17 @@
+<h1>This is index page</h1>
+
+<table border="1">
+	<%@users.each do |user|%>
+	 <tr>
+	  <td><%=user.id%></td>
+	  <td><%=user.name%></td>
+	  <td><%=user.phone_no%></td>
+	  <td><%=user.email%></td>
+	  <td><%=user.password%></td>
+	  <td><%= link_to "go_to_show_page", show_user_path(id: user.id)%></td> 
+	  <td><%= link_to "edit_page", edit_user_path(id: user.id)%></td>
+	  <td><%=link_to "delete_user", destroy_user_path(id: user.id), method: :delete%></td>
+	 </tr>
+	<%end%> 
+</table>
+<%= link_to'create_new_user',users_new_path%>

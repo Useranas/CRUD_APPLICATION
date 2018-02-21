@@ -1,0 +1,7 @@
+<%= form_tag users_create_path  do %>
+  username    <%= text_field "users", "name", "size" => 20 %><br><br>
+  usrephone.no <%= text_field "users", "phone_no", "size" => 20 %><br>	<br>
+  useremail    <%= text_field "users", "email", "size" => 20 %>	<br><br>
+  userpassword <%= text_field "users", "passwoord", "size" => 20 %><br>  
+  <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
+<% end %>
